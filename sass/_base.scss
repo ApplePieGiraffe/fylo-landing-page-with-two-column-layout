@@ -1,0 +1,27 @@
+:root {
+    // PRIMARY COLORS
+    --color-very-dark-blue: hsl(243, 87%, 12%);
+    --color-desaturated-blue: hsl(238, 22%, 44%);
+    // ACCENT COLORS
+    --color-bright-blue: hsl(224, 93%, 58%);
+    --color-moderate-cyan: hsl(170, 45%, 43%);
+    // NEUTRAL COLORS
+    --color-light-greyish-blue: hsl(240, 75%, 98%);
+    --color-light-grey: hsl(0, 0%, 75%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 50%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
