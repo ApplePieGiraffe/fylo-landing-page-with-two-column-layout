@@ -11,6 +11,15 @@ button {
     outline: none;
     transition: all .2s;
 
+    @media only screen and (max-width: 800px) {
+        width: max-content;
+        padding: 0 2rem;
+    }
+
+    @media only screen and (max-width: 725px) {
+        width: 100%;
+    }
+
     &:hover {
         background-color: hsla(224, 93%, 58%, 0.842);
     }

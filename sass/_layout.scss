@@ -1,17 +1,31 @@
+body {
+    overflow-x: hidden;
+}
+
 header {
     display: flex;
     height: 18rem;
     padding: 3rem 8rem;
     align-items: center;
 
+    @media only screen and (max-width: 800px) {
+        height: 14rem;
+        margin-bottom: 4rem;
+        padding: 3rem 6rem;
+    }
+
     svg {
         margin-right: auto;
         width: 16.6rem;
+
+        @media only screen and (max-width: 1000px) {
+            width: 13rem;
+        }
     }
 
     nav {
         width: 23%;
-        min-width: 25rem;
+        min-width: 18rem;
 
         ul {
             display: flex;
@@ -49,15 +63,31 @@ main {
         display: flex;
         padding: 0 8rem;
 
+        @media only screen and (max-width: 725px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         &__content {
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 50%;
 
+            @media only screen and (max-width: 725px) {
+                align-items: center;
+                width: 70%;
+                min-width: 40rem;
+            }
+
             input {
                 width: 50%;
                 margin-right: 1.4rem;
+
+                @media only screen and (max-width: 725px) {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
             }
         }
 
@@ -65,16 +95,35 @@ main {
             display: flex;
             justify-content: center;
             width: 50%;
+            
+            @media only screen and (max-width: 1000px) {
+                padding-left: 5rem;
+            }
+
+            @media only screen and (max-width: 725px) {
+                order: -1;
+                width: 70%;
+                min-width: 40rem;
+                padding-left: 0;
+            }
 
             svg {
                 height: 50rem;
                 width: auto;
+
+                @media only screen and (max-width: 800px) {
+                    height: 45rem;
+                }
             }
         }
     }
 
     .primary {
         margin-bottom: 22rem;
+
+        @media only screen and (max-width: 725px) {
+            margin-bottom: 14rem;
+        }
 
         h1 {
             margin-bottom: 1.8rem;
@@ -90,13 +139,25 @@ main {
         padding-bottom: 10rem;
         background-color: var(--color-light-greyish-blue);
 
+        @media only screen and (max-width: 725px) {
+            padding-top: 2rem;
+        }
+
         h1 {
             margin-bottom: 3.2rem;
+
+            @media only screen and (max-width: 725px) {
+                font-size: 2.8rem;
+            }
         }
 
         .feature__content > p {
             width: 85%;
             margin-bottom: 2rem;
+
+            @media only screen and (max-width: 725px) {
+                width: 100%;
+            }
         }
 
         .feature__content {
@@ -118,9 +179,20 @@ main {
         display: flex;
         background-color: var(--color-desaturated-blue);
 
+        @media only screen and (max-width: 725px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         &__content{
             width: 50%;
             padding: 10rem 8rem;
+
+            @media only screen and (max-width: 725px) {
+                width: 80%;
+                min-width: 42rem;
+                padding: 10rem 0rem;
+            }
 
             h2 {
                 margin-bottom: 2rem;
@@ -128,12 +200,28 @@ main {
 
             p {
                 width: 95%;
+
+                @media only screen and (max-width: 725px) {
+                    font-size: 1.6rem;
+                }
+            }
+
+            @media only screen and (max-width: 725px) {
+                padding: 6rem 8rem;
+                padding-bottom: 4rem;
             }
         }
 
         &__form {
             width: 50%;
             padding: 10rem 13rem;
+
+            @media only screen and (max-width: 725px) {
+                width: 80%;
+                min-width: 42rem;
+                padding: 0 8rem;
+                padding-bottom: 6rem;
+            }
 
             input {
                 width: 100%;
@@ -154,15 +242,28 @@ main {
     background-color: var(--color-very-dark-blue);
     color: white;
 
+    @media only screen and (max-width: 725px) {
+        height: max-content;
+        text-align: left;
+    }
+
     &__logo {
         display: flex;
         align-items: flex-end;
         height: 45%;
         padding: 2.6rem 0;
 
+        @media only screen and (max-width: 725px) {
+            justify-content: center;
+        }
+
         svg {
             height: 5.4rem;
             width: auto;
+
+            @media only screen and (max-width: 1000px) {
+                height: 4.4rem;
+            }
     
             * {
                 fill: white;
@@ -176,12 +277,22 @@ main {
         font-size: 1.6rem;
         font-weight: 300;
 
+        @media only screen and (max-width: 725px) {
+            flex-direction: column;
+            padding-top: 3rem;
+        }
+
         ul {
             list-style: none;
         }
 
         &__contact {
             width: 35%;
+
+            @media only screen and (max-width: 725px) {
+                margin-bottom: 3.4rem;
+                width: 100%;
+            }
 
             ul li {
                 display: flex;
@@ -208,6 +319,11 @@ main {
             height: 100%;
             width: 42%;
 
+            @media only screen and (max-width: 725px) {
+                align-items: flex-start;
+                margin-bottom: 3.4rem;
+            }
+
             ul {
                 display: flex;
                 flex-flow: column wrap;
@@ -229,6 +345,10 @@ main {
         }
 
         &__social {
+            @media only screen and (max-width: 725px) {
+                margin: 0 auto;
+            }
+
             ul {
                 display: flex;
             
