@@ -13,6 +13,11 @@ h1 {
     font-size: 4.2rem;
 }
 
+h2 {
+    color: white;
+    font-size: 3.2rem;
+}
+
 p {
     color: var(--color-very-dark-blue);
     font-size: 1.8rem;
@@ -20,11 +25,19 @@ p {
 
 header {
     font-family: 'Raleway', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 300;
 
     nav ul li a {
         color: inherit;
         text-decoration: none;
+    }
+}
+
+.cta {
+    p {
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 300;
     }
 }

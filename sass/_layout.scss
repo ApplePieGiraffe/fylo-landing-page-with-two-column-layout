@@ -18,30 +18,42 @@ header {
             justify-content: space-between;
             width: 100%;
             list-style: none;
+
+            li a {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    height: 1px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    background-color: var(--color-light-grey);
+                    opacity: 0;
+                    transition: all .5s;
+                }
+
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
 }
 
 main {
-    .primary {
+    .feature {
         display: flex;
         padding: 0 8rem;
-        margin-bottom: 30rem;
 
         &__content {
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 50%;
-
-            h1 {
-                margin-bottom: 1.8rem;
-            }
-
-            p {
-                margin-bottom: 2.8rem;
-            }
-
 
             input {
                 width: 50%;
@@ -61,26 +73,181 @@ main {
         }
     }
 
-    .secondary {
-        display: flex;
-        padding: 0 8rem;
-        margin-bottom: 10rem;
+    .primary {
+        margin-bottom: 22rem;
 
-        &__content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 50%;
+        h1 {
+            margin-bottom: 1.8rem;
         }
 
-        &__illustration {
-            display: flex;
-            justify-content: center;
-            width: 50%;
+        p {
+            margin-bottom: 2.8rem;
+        }
+    }
 
-            svg {
-                height: 50rem;
-                width: auto;
+    .secondary {
+        padding-top: 17.4rem;
+        padding-bottom: 10rem;
+        background-color: var(--color-light-greyish-blue);
+
+        h1 {
+            margin-bottom: 3.2rem;
+        }
+
+        .feature__content > p {
+            width: 85%;
+            margin-bottom: 2rem;
+        }
+
+        .feature__content {
+            width: 65%;
+
+            &__link {
+                display: inline-block;
+                margin-bottom: 5rem;
+            }
+        }
+
+        .feature__illustration {
+            width: 45%;
+        }
+        
+    }
+
+    .cta {
+        display: flex;
+        background-color: var(--color-desaturated-blue);
+
+        &__content{
+            width: 50%;
+            padding: 10rem 8rem;
+
+            h2 {
+                margin-bottom: 2rem;
+            }
+
+            p {
+                width: 95%;
+            }
+        }
+
+        &__form {
+            width: 50%;
+            padding: 10rem 13rem;
+
+            input {
+                width: 100%;
+                margin-bottom: 1.6rem;
+                border: none;
+                border-radius: 4px;
+                box-shadow: 4px 4px 8px rgba(0, 0, 0, .2);
+            }
+
+        }
+
+    }
+}
+
+.footer {
+    height: 40rem;
+    padding: 4rem 8rem;
+    background-color: var(--color-very-dark-blue);
+    color: white;
+
+    &__logo {
+        display: flex;
+        align-items: flex-end;
+        height: 45%;
+        padding: 2.6rem 0;
+
+        svg {
+            height: 5.4rem;
+            width: auto;
+    
+            * {
+                fill: white;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        height: 55%;
+        font-size: 1.6rem;
+        font-weight: 300;
+
+        ul {
+            list-style: none;
+        }
+
+        &__contact {
+            width: 35%;
+
+            ul li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 2rem;
+
+                svg {
+                    height: 1.8rem;
+                    width: auto;
+                    margin-right: 2rem;
+                }
+
+                p {
+                    color: white;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        &__navigation {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 42%;
+
+            ul {
+                display: flex;
+                flex-flow: column wrap;
+                height: 100%;
+                
+                li {
+                    margin-bottom: 1.6rem;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: var(--color-light-grey);
+                        }
+                    }
+                }
+            }
+        }
+
+        &__social {
+            ul {
+                display: flex;
+            
+                li {
+                    margin-right: 1.6rem;
+
+                    a svg {
+                        height: 3rem;
+                        width: 3rem;
+
+                        &:hover * {
+                            fill: var(--color-light-grey);
+                        }
+    
+                        * {
+                            fill: white;
+                        }
+                    }
+                }
             }
         }
     }
