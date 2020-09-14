@@ -3,3 +3,5 @@
 A challenge from Frontend Mentor.
 
 Made with good 'ol HTML and CSS. (And Sass, to speed things up.)
+
+Also, Animate.css for some really nice animations.
