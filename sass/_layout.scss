@@ -138,6 +138,7 @@ main {
         padding-top: 17.4rem;
         padding-bottom: 10rem;
         background-color: var(--color-light-greyish-blue);
+        clip-path: ellipse(90% 70% at 50% 70%);
 
         @media only screen and (max-width: 725px) {
             padding-top: 2rem;
@@ -184,7 +185,7 @@ main {
             align-items: center;
         }
 
-        &__content{
+        &__content {
             width: 50%;
             padding: 10rem 8rem;
 
@@ -370,5 +371,27 @@ main {
                 }
             }
         }
+    }
+}
+
+.attribution {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    background-color: var(--color-very-dark-blue);
+    color: var(--color-desaturated-blue);
+    font-size: 11px;
+
+    @media only screen and (max-width: 350px) {
+        flex-direction: column;
+        font-size: 10px;
+    }
+
+    span {
+        margin-right: .5rem;
+    }
+
+    a { 
+        color: var(--color-light-grey); 
     }
 }
